@@ -1,1 +1,7 @@
+name: daily_dart_bot
+description: Günlük çalışan Dart botu
+environment:
+  sdk: '>=2.12.0 <4.0.0'
 
+dependencies:
+  http: ^0.13.5

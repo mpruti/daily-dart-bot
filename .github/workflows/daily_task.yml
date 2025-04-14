@@ -2,7 +2,7 @@ name: Daily Automation
 
 on:
   schedule:
-    - cron: '0 10 * * *' # 13:00 Türkiye saati (UTC+3)
+    - cron: '40 13 * * *' # 16:40 Türkiye saati (UTC+3)
   workflow_dispatch:
 
 jobs:

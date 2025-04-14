@@ -1,0 +1,17 @@
+name: Daily Automation
+
+on:
+  schedule:
+    - cron: '0 10 * * *' # 13:00 Türkiye saati (UTC+3)
+  workflow_dispatch:
+
+jobs:
+  run-dart-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+      - run: dart bot.dart
